@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form method="post" novalidate>
+        <div class="info" id="personal-info">
+            <label for="personal-info">Введите данные:</label>
+            <br>
+            <br>
+            <input type="text" placeholder="Имя" name="name" id="name" minlength="2" maxlength="20" required>
+            <input type="email" placeholder="email@example.ru" name="email" id="email" required>
+            <input type="number" placeholder="Возраст" name="age" min="1" id="age" required>
+            <span class="error-message" id="age-error"></span>
+        </div>
+        <div class="sex">
+            <p class="personal-info">Выберите пол</p>
+            <input type="radio" id="male" name="sex" value="male">
+            <label for="male">М</label>
+            <input type="radio" id="female" name="sex" value="female">
+            <label for="female">Ж</label>
+        </div>
+        <div class="profession-selection">
+            <p class="personal-info">Выберите профессию</p>
+            <select name="profession" id="job" required>
+                <option selected disabled hidden>Выберите профессию</option>
+                <option value="doctor">Врач</option>
+                <option value="programmer">Программист</option>
+                <option value="teacher">Учитель</option>
+                <option value="designer">Дизайнер</option>
+                <option value="seller">Продавец</option>
+                <option value="engineer">Инженер</option>
+                <option value="other">Другое</option>
+            </select>
+        </div>
+        <div class="password">
+            <p class="personal-info">Введите пароль</p>
+            <input type="password" placeholder="Пароль" name="password" minlength="8" pattern="/(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}/g
+        " id="password" required>
+            <div class="password-hint">Правильный пароль должен содержать не менее 8 символов, включая заглавные и
+                строчные буквы и цифры.</div>
+            <p class="personal-info">Повторите пароль</p>
+            <input type="password" placeholder="Пароль" name="password" minlength="8" pattern="/(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}/g
+        " required>
+        </div>
+        <br>
+        <br>
+        <div class="agreement">
+            <input type="checkbox" id="checkbox" required>
+            <label for="checkbox">Даю согласие на обработку персональных данных</label>
+            <span class="error-message" id="agreement-error" style="display:none; color:red;">Подтвердите свое
+                согласие</span>
+        </div>
+        <br>
+        <br>
+        <input type="submit" value="Отправить" id="button">
+    </form>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

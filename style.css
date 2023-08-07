@@ -1,0 +1,18 @@
+input:required:valid {
+    border: 2px solid green;
+
+}
+
+input:invalid {
+    box-shadow: 0 0 5px 1px rgb(246, 184, 109);
+    border: none;
+
+}
+
+#personal-info {
+    font-weight: bolder;
+}
+
+.personal-info {
+    font-weight: bolder;
+}
